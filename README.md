@@ -85,6 +85,15 @@ df.head(10)
 <img width="478" height="434" alt="image" src="https://github.com/user-attachments/assets/fdabc51a-ce30-4526-9fcf-038725845ba7" />
 
 ```python
+from sklearn.preprocessing import Normalizer
+scaler=Normalizer()
+df2[['Height','Weight']]=scaler.fit_transform(df2[['Height','Weight']])
+df2
+```
+<img width="478" height="514" alt="image" src="https://github.com/user-attachments/assets/45449dc0-d59e-4c98-b400-4d60c9b527c1" />
+
+
+```python
 from sklearn.preprocessing import MaxAbsScaler
 max1=MaxAbsScaler()
 df3[['Height','Weight']]=max1.fit_transform(df3[['Height','Weight']])
